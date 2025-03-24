@@ -1,13 +1,18 @@
 After Cloning my Repo
-1. Start The Docker Desktop after that
 
-2. you need to build the docker Image by using the cmd 
+1.Start The Docker Desktop after that
+
+2. you need to install the requirements.txt file by using the cmd 
+
+    -> pip freeze > requirements.txt
+
+3. you need to build the docker Image by using the cmd 
     
     ->docker build -t register .
     
     Note: use only register as the image_name
 
-3. next you need to install the kubernetes and Minikube
+4. next you need to install the kubernetes and Minikube
     
     Note: while installing it will ask you harmful to install like that 
           ignore that thing and do not click Do not Run
@@ -15,31 +20,31 @@ After Cloning my Repo
 
     in case of Don't run cse you need to do note mention steps
 
-4. you need to connect the docker with Minikube by using this cmd
+5. you need to connect the docker with Minikube by using this cmd
 
     ->minikube start --driver=docker
 
     Note: It take some time to connect and downlod
 
-5. next you need to load the image into minikube by using the command
+6. next you need to load the image into minikube by using the command
 
     -> minikube image load register:latest
 
-6. next you need to check the image was loaded into minikube or not by using this cmd
+7. next you need to check the image was loaded into minikube or not by using this cmd
 
     -> minikube image ls
 
-7. next you need to run the register.yml file by using Kubernetes using this cmd
+8. next you need to run the register.yml file by using Kubernetes using this cmd
 
     -> kubectl apply -f register.yml
 
-8. next you need to see the deployments, services, pods by this cmds
+9. next you need to see the deployments, services, pods by this cmds
 
     -> kubectl get deployments
     -> kubectl get services
     -> kubectl get pods
 
-9. the final step to get the service url by using the minikube with this cmd
+10. the final step to get the service url by using the minikube with this cmd
 
     -> minikube service register-service --url
 

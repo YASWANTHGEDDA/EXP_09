@@ -10,7 +10,7 @@ After Cloning my Repo
     
     ->docker build -t register .
     
-    Note: use only register as the image_name
+    Note: use only register as the image_name 
 
 4. next you need to install the kubernetes and Minikube
     
